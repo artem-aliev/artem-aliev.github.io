@@ -1,0 +1,430 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>graphframe - DseGraphFrame Documnetation - com.datastax.bdp.graph.spark.graphframe</title>
+          <meta name="description" content="graphframe - DseGraphFrame Documnetation - com.datastax.bdp.graph.spark.graphframe" />
+          <meta name="keywords" content="graphframe DseGraphFrame Documnetation com.datastax.bdp.graph.spark.graphframe" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../../index.html';
+            var hash = 'com.datastax.bdp.graph.spark.graphframe.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../../package.html" class="extype" name="com">com</a>.<a href="../../../../package.html" class="extype" name="com.datastax">datastax</a>.<a href="../../../package.html" class="extype" name="com.datastax.bdp">bdp</a>.<a href="../../package.html" class="extype" name="com.datastax.bdp.graph">graph</a>.<a href="../package.html" class="extype" name="com.datastax.bdp.graph.spark">spark</a></p>
+        <h1>graphframe</h1><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">graphframe</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The root package of  DSE GraphFrame support.
+Offers handy implicit conversions that add DSE-specific methods to
+<span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span> and <span class="extype" name="org.graphframes.GraphFrame">GraphFrame</span>.</p><p>Call <span class="extype" name="com.datastax.bdp.graph.spark.graphframe#dseGraph">dseGraph</span> method on
+the <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span> object
+to create a <span class="extype" name="org.graphframes.GraphFrame">GraphFrame</span> exposing
+DSE Graph as Spark GraphFrame.</p><p>Call <a href="DseGraphFrame.html" class="extype" name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame">GraphFrameFunctions</a> <code>saveToDse</code>
+function on any <code>GraphFrame</code> to save updated graph back to DSE.</p><p>Example:</p><pre> <span class="kw">import</span> com.datastax.bdp.graph.spark.graphframe._
+
+<span class="kw">val</span> graphName = <span class="lit">"test"</span>
+<span class="cmt">// Read graph and print vertices labels:</span>
+ <span class="kw">val</span> graph = spark.dseGraph(graphName)
+ graph.V().select(<span class="lit">"label"</span>).distinct.show</pre></div><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="com.datastax.bdp.graph.spark.graphframe"><span>graphframe</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DseGraphFrameextendsSerializable"></a>
+      <a id="DseGraphFrame:DseGraphFrame"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DseGraphFrame.html"><span class="name">DseGraphFrame</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@DseGraphFrameextendsSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Provides DSEGraph-specific methods on <span class="extype" name="org.graphframes.GraphFrame">GraphFrame</span>
+It support
+graphName is needed for some traversal steps and to write data back
+It can be lost during DseGraphFrame-&gt;GraphFrame-&gt;DseGraphFrame implicit conversions
+set graphName tot he target graph if needed.</p>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrameBuilder" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DseGraphFrameBuilderextendsAnyRef"></a>
+      <a id="DseGraphFrameBuilder:DseGraphFrameBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DseGraphFrameBuilder.html"><span class="name">DseGraphFrameBuilder</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@DseGraphFrameBuilderextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Helper class to create GraphFrame from C* backend.</p><div class="fullcomment"><div class="comment cmt"><p>Helper class to create GraphFrame from C* backend.
+The GraphFrame caches dataframes on creation. It is recommended to call withVertex method to create subgraph prior
+graph frame creation to reduce memory footprint</p><p>Usage:
+val dataFrame = DseGraphFrameBuilder(&quot;graph&quot;, spark).dseGraph()
+</p></div></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DseGraphTraversal[E]extendsDefaultGraphTraversal[org.apache.spark.sql.Row,E]"></a>
+      <a id="DseGraphTraversal[E]:DseGraphTraversal[E]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DseGraphTraversal.html"><span class="name">DseGraphTraversal</span></a><span class="tparams">[<span name="E">E</span>]</span><span class="result"> extends <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.DefaultGraphTraversal">DefaultGraphTraversal</span>[<span class="extype" name="org.apache.spark.sql.Row">Row</span>, <span class="extype" name="com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal.E">E</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@DseGraphTraversal[E]extendsDefaultGraphTraversal[org.apache.spark.sql.Row,E]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">wrap vertex data frame to implement TinkerPop functions
+</p>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphTraversalInterceptor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DseGraphTraversalInterceptor=PartialFunction[com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal[_],org.apache.spark.sql.DataFrame]"></a>
+      <a id="DseGraphTraversalInterceptor:DseGraphTraversalInterceptor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DseGraphTraversalInterceptor</span><span class="result"> = <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<a href="DseGraphTraversal.html" class="extype" name="com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal">DseGraphTraversal</a>[_], <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@DseGraphTraversalInterceptor=PartialFunction[com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal[_],org.apache.spark.sql.DataFrame]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"> should be used to implement optimization  for DseGraphTraversal</p><div class="fullcomment"><div class="comment cmt"><p> should be used to implement optimization  for DseGraphTraversal</p><p> if isDefinedAt(traversal: DseGraphTraversal[_]) methods returns true
+ apply() methods return result DataFrame.
+ It will be used as result instead of standard
+ DseGraphTraversal enumerates internal list of interceptors. TODO: provide user faced extension mechanism
+</p></div></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.EdgeBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EdgeBuilderextendsGraphComponentBuilderwithSerializable"></a>
+      <a id="EdgeBuilder:EdgeBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="EdgeBuilder.html"><span class="name">EdgeBuilder</span></a><span class="result"> extends <a href="GraphComponentBuilder.html" class="extype" name="com.datastax.bdp.graph.spark.graphframe.GraphComponentBuilder">GraphComponentBuilder</a> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@EdgeBuilderextendsGraphComponentBuilderwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.GraphComponentBuilder" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="GraphComponentBuilderextendsSerializable"></a>
+      <a id="GraphComponentBuilder:GraphComponentBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GraphComponentBuilder.html"><span class="name">GraphComponentBuilder</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@GraphComponentBuilderextendsSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.SparkSessionFunctions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SparkSessionFunctionsextendsSerializable"></a>
+      <a id="SparkSessionFunctions:SparkSessionFunctions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SparkSessionFunctions.html"><span class="name">SparkSessionFunctions</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@SparkSessionFunctionsextendsSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Provides DSE-specific methods on <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></p>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.VertexBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VertexBuilderextendsGraphComponentBuilderwithSerializable"></a>
+      <a id="VertexBuilder:VertexBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VertexBuilder.html"><span class="name">VertexBuilder</span></a><span class="result"> extends <a href="GraphComponentBuilder.html" class="extype" name="com.datastax.bdp.graph.spark.graphframe.GraphComponentBuilder">GraphComponentBuilder</a> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@VertexBuilderextendsGraphComponentBuilderwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Internal class to build table for one class of vertex
+</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DseGraphFrame"></a>
+      <a id="DseGraphFrame:DseGraphFrame"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DseGraphFrame$.html"><span class="name">DseGraphFrame</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@DseGraphFrame" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrameBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DseGraphFrameBuilder"></a>
+      <a id="DseGraphFrameBuilder:DseGraphFrameBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DseGraphFrameBuilder$.html"><span class="name">DseGraphFrameBuilder</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@DseGraphFrameBuilder" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Usage:
+val dataFrame = DseGraphFrameBuilder(&quot;graph&quot;, spark).dataFrame()
+</p>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.VertexLabelDropInterceptor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VertexLabelDropInterceptor"></a>
+      <a id="VertexLabelDropInterceptor:VertexLabelDropInterceptor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VertexLabelDropInterceptor$.html"><span class="name">VertexLabelDropInterceptor</span></a><span class="result"> extends <a href="#DseGraphTraversalInterceptor=PartialFunction[com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal[_],org.apache.spark.sql.DataFrame]" class="extmbr" name="com.datastax.bdp.graph.spark.graphframe.DseGraphTraversalInterceptor">DseGraphTraversalInterceptor</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@VertexLabelDropInterceptor" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.graphframe#backToDseVertexFrame" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="backToDseVertexFrame[E](gt:org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal[org.apache.spark.sql.Row,E]):com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal[E]"></a>
+      <a id="backToDseVertexFrame[E](GraphTraversal[Row,E]):DseGraphTraversal[E]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">backToDseVertexFrame</span><span class="tparams">[<span name="E">E</span>]</span><span class="params">(<span name="gt">gt: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal">GraphTraversal</span>[<span class="extype" name="org.apache.spark.sql.Row">Row</span>, <span class="extype" name="com.datastax.bdp.graph.spark.graphframe.backToDseVertexFrame.E">E</span>]</span>)</span><span class="result">: <a href="DseGraphTraversal.html" class="extype" name="com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal">DseGraphTraversal</a>[<span class="extype" name="com.datastax.bdp.graph.spark.graphframe.backToDseVertexFrame.E">E</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@backToDseVertexFrame[E](gt:org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal[org.apache.spark.sql.Row,E]):com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal[E]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"></p>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe#fromDseGraphFrame" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fromDseGraphFrame(gf:com.datastax.bdp.graph.spark.graphframe.DseGraphFrame):org.graphframes.GraphFrame"></a>
+      <a id="fromDseGraphFrame(DseGraphFrame):GraphFrame"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fromDseGraphFrame</span><span class="params">(<span name="gf">gf: <a href="DseGraphFrame.html" class="extype" name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame">DseGraphFrame</a></span>)</span><span class="result">: <span class="extype" name="org.graphframes.GraphFrame">GraphFrame</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@fromDseGraphFrame(gf:com.datastax.bdp.graph.spark.graphframe.DseGraphFrame):org.graphframes.GraphFrame" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.graphframe#fromVertexFrame" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fromVertexFrame[E](gt:org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal[org.apache.spark.sql.Row,E]):org.apache.spark.sql.DataFrame"></a>
+      <a id="fromVertexFrame[E](GraphTraversal[Row,E]):DataFrame"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fromVertexFrame</span><span class="tparams">[<span name="E">E</span>]</span><span class="params">(<span name="gt">gt: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal">GraphTraversal</span>[<span class="extype" name="org.apache.spark.sql.Row">Row</span>, <span class="extype" name="com.datastax.bdp.graph.spark.graphframe.fromVertexFrame.E">E</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@fromVertexFrame[E](gt:org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal[org.apache.spark.sql.Row,E]):org.apache.spark.sql.DataFrame" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">add all DataFrame functions to DseGraphTraversal
+</p>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe#toDseGraphFrame" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toDseGraphFrame(gf:org.graphframes.GraphFrame):com.datastax.bdp.graph.spark.graphframe.DseGraphFrame"></a>
+      <a id="toDseGraphFrame(GraphFrame):DseGraphFrame"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toDseGraphFrame</span><span class="params">(<span name="gf">gf: <span class="extype" name="org.graphframes.GraphFrame">GraphFrame</span></span>)</span><span class="result">: <a href="DseGraphFrame.html" class="extype" name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame">DseGraphFrame</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@toDseGraphFrame(gf:org.graphframes.GraphFrame):com.datastax.bdp.graph.spark.graphframe.DseGraphFrame" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.graphframe#toSparkSessionFunctions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toSparkSessionFunctions(spark:org.apache.spark.sql.SparkSession):com.datastax.bdp.graph.spark.graphframe.SparkSessionFunctions"></a>
+      <a id="toSparkSessionFunctions(SparkSession):SparkSessionFunctions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toSparkSessionFunctions</span><span class="params">(<span name="spark">spark: <span class="extype" name="org.apache.spark.sql.SparkSession">SparkSession</span></span>)</span><span class="result">: <a href="SparkSessionFunctions.html" class="extype" name="com.datastax.bdp.graph.spark.graphframe.SparkSessionFunctions">SparkSessionFunctions</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.package@toSparkSessionFunctions(spark:org.apache.spark.sql.SparkSession):com.datastax.bdp.graph.spark.graphframe.SparkSessionFunctions" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

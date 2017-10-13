@@ -1,0 +1,1024 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>DseGraphFrame - DseGraphFrame Documnetation - com.datastax.bdp.graph.spark.graphframe.DseGraphFrame</title>
+          <meta name="description" content="DseGraphFrame - DseGraphFrame Documnetation - com.datastax.bdp.graph.spark.graphframe.DseGraphFrame" />
+          <meta name="keywords" content="DseGraphFrame DseGraphFrame Documnetation com.datastax.bdp.graph.spark.graphframe.DseGraphFrame" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../../index.html';
+            var hash = 'com.datastax.bdp.graph.spark.graphframe.DseGraphFrame';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="DseGraphFrame$.html" title="See companion object"><img alt="Class/Object" src="../../../../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../../../../../package.html" class="extype" name="com">com</a>.<a href="../../../../package.html" class="extype" name="com.datastax">datastax</a>.<a href="../../../package.html" class="extype" name="com.datastax.bdp">bdp</a>.<a href="../../package.html" class="extype" name="com.datastax.bdp.graph">graph</a>.<a href="../package.html" class="extype" name="com.datastax.bdp.graph.spark">spark</a>.<a href="package.html" class="extype" name="com.datastax.bdp.graph.spark.graphframe">graphframe</a></p>
+        <h1><a href="DseGraphFrame$.html" title="See companion object">DseGraphFrame</a></h1><h3><span class="morelinks"><div>
+            Related Docs:
+            <a href="DseGraphFrame$.html" title="See companion object">object DseGraphFrame</a>
+            | <a href="package.html" class="extype" name="com.datastax.bdp.graph.spark.graphframe">package graphframe</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DseGraphFrame</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides DSEGraph-specific methods on <span class="extype" name="org.graphframes.GraphFrame">GraphFrame</span>
+It support
+graphName is needed for some traversal steps and to write data back
+It can be lost during DseGraphFrame-&gt;GraphFrame-&gt;DseGraphFrame implicit conversions
+set graphName tot he target graph if needed.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame"><span>DseGraphFrame</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(gf:org.graphframes.GraphFrame,_graphName:Option[String],_graphSchema:Option[&lt;error&gt;]):com.datastax.bdp.graph.spark.graphframe.DseGraphFrame"></a>
+      <a id="&lt;init&gt;:DseGraphFrame"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DseGraphFrame</span><span class="params">(<span name="gf">gf: <span class="extype" name="org.graphframes.GraphFrame">GraphFrame</span></span>, <span name="_graphName">_graphName: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="_graphSchema">_graphSchema: <span class="extype" name="scala.Option">Option</span>[&lt;error&gt;] = <span class="symbol">None</span></span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@&lt;init&gt;(gf:org.graphframes.GraphFrame,_graphName:Option[String],_graphSchema:Option[&lt;error&gt;]):com.datastax.bdp.graph.spark.graphframe.DseGraphFrame" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@##():Int" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#E" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="E():com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal[org.apache.tinkerpop.gremlin.structure.Edge]"></a>
+      <a id="E():DseGraphTraversal[Edge]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">E</span><span class="params">()</span><span class="result">: <a href="DseGraphTraversal.html" class="extype" name="com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal">DseGraphTraversal</a>[<span class="extype" name="org.apache.tinkerpop.gremlin.structure.Edge">Edge</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@E():com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal[org.apache.tinkerpop.gremlin.structure.Edge]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returned graph traversal supports subset of TinkerPop3 traversal steps
+</p><div class="fullcomment"><div class="comment cmt"><p>Returned graph traversal supports subset of TinkerPop3 traversal steps
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>GraphTraversal[Edge] for the graph</p></dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#V" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="V():com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal[org.apache.tinkerpop.gremlin.structure.Vertex]"></a>
+      <a id="V():DseGraphTraversal[Vertex]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">V</span><span class="params">()</span><span class="result">: <a href="DseGraphTraversal.html" class="extype" name="com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal">DseGraphTraversal</a>[<span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex">Vertex</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@V():com.datastax.bdp.graph.spark.graphframe.DseGraphTraversal[org.apache.tinkerpop.gremlin.structure.Vertex]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Returned graph traversal supports subset of TinkerPop3 traversal steps
+</p><div class="fullcomment"><div class="comment cmt"><p>Returned graph traversal supports subset of TinkerPop3 traversal steps
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>GraphTraversal[Vertex] for the graph</p></dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#_graphName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="_graphName:Option[String]"></a>
+      <a id="_graphName:Option[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_graphName</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@_graphName:Option[String]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#_graphSchema" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_graphSchema:Option[&lt;error&gt;]"></a>
+      <a id="_graphSchema:Option[&lt;error&gt;]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_graphSchema</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[&lt;error&gt;]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@_graphSchema:Option[&lt;error&gt;]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#cache" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cache():DseGraphFrame.this.type"></a>
+      <a id="cache():DseGraphFrame.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cache</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame">DseGraphFrame</a>.this.type</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@cache():DseGraphFrame.this.type" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">proxy call to gf.cache()
+</p><div class="fullcomment"><div class="comment cmt"><p>proxy call to gf.cache()
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>this</p></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#deleteEdgeProperties" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="deleteEdgeProperties(df:org.apache.spark.sql.DataFrame,properties:String*):Unit"></a>
+      <a id="deleteEdgeProperties(DataFrame,String*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deleteEdgeProperties</span><span class="params">(<span name="df">df: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>, <span name="properties">properties: <span class="extype" name="scala.Predef.String">String</span>*</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@deleteEdgeProperties(df:org.apache.spark.sql.DataFrame,properties:String*):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">clean edges properties
+</p><div class="fullcomment"><div class="comment cmt"><p>clean edges properties
+</p></div><dl class="paramcmts block"><dt class="param">properties</dt><dd class="cmt"><p>delete only selected properties not entire row</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@varargs</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#deleteEdges" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="deleteEdges(df:org.apache.spark.sql.DataFrame,cache:Boolean):Unit"></a>
+      <a id="deleteEdges(DataFrame,Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deleteEdges</span><span class="params">(<span name="df">df: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>, <span name="cache">cache: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@deleteEdges(df:org.apache.spark.sql.DataFrame,cache:Boolean):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">delete graph edges.</p><div class="fullcomment"><div class="comment cmt"><p>delete graph edges.
+4 id columns should be passed to the method
++--------------------+--------------------+-------+--------------------+
+|                 src|                 dst| ~label|                  id|
++--------------------+--------------------+-------+--------------------+
+|god:THxdAAAAAAAAAAAA|titan:J474AAAAAAA...| father|da0a9900-8fe1-11e...|
++--------------------+--------------------+-------+--------------------+
+</p></div><dl class="paramcmts block"><dt class="param">df</dt><dd class="cmt"><p>data frame with edge ids: src,dst,~label, id</p></dd><dt class="param">cache</dt><dd class="cmt"><p>cache df before processing, true by default for consistence updates.
+             two C* entries need to be deleted for one edge, so no reloads expected between this two calls.</p></dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#deleteEdges" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="deleteEdges(df:org.apache.spark.sql.DataFrame):Unit"></a>
+      <a id="deleteEdges(DataFrame):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deleteEdges</span><span class="params">(<span name="df">df: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@deleteEdges(df:org.apache.spark.sql.DataFrame):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">shortcut for deleteEdges(df: DataFrame, cache: Boolean = true) for Java
+</p>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#deleteVertexProperties" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="deleteVertexProperties(df:org.apache.spark.sql.DataFrame,properties:Seq[String],labels:Seq[String],cache:Boolean):Unit"></a>
+      <a id="deleteVertexProperties(DataFrame,Seq[String],Seq[String],Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deleteVertexProperties</span><span class="params">(<span name="df">df: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>, <span name="properties">properties: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="labels">labels: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="cache">cache: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@deleteVertexProperties(df:org.apache.spark.sql.DataFrame,properties:Seq[String],labels:Seq[String],cache:Boolean):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">clean vertex properties with meta properties
+</p><div class="fullcomment"><div class="comment cmt"><p>clean vertex properties with meta properties
+</p></div><dl class="paramcmts block"><dt class="param">properties</dt><dd class="cmt"><p>property names to delete</p></dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#deleteVertexProperties" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="deleteVertexProperties(df:org.apache.spark.sql.DataFrame,properties:String*):Unit"></a>
+      <a id="deleteVertexProperties(DataFrame,String*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deleteVertexProperties</span><span class="params">(<span name="df">df: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>, <span name="properties">properties: <span class="extype" name="scala.Predef.String">String</span>*</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@deleteVertexProperties(df:org.apache.spark.sql.DataFrame,properties:String*):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">clean vertex properties with meta properties
+</p><div class="fullcomment"><div class="comment cmt"><p>clean vertex properties with meta properties
+</p></div><dl class="paramcmts block"><dt class="param">properties</dt><dd class="cmt"><p>property names to delete</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@varargs</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#deleteVertices" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="deleteVertices(label:String):Unit"></a>
+      <a id="deleteVertices(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deleteVertices</span><span class="params">(<span name="label">label: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@deleteVertices(label:String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">delete all vertices with given label
+</p>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#deleteVertices" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="deleteVertices(df:org.apache.spark.sql.DataFrame,labels:Seq[String],cache:Boolean):Unit"></a>
+      <a id="deleteVertices(DataFrame,Seq[String],Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deleteVertices</span><span class="params">(<span name="df">df: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>, <span name="labels">labels: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="cache">cache: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@deleteVertices(df:org.apache.spark.sql.DataFrame,labels:Seq[String],cache:Boolean):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">delete vertices and all related edges
+</p>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#gf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="gf:org.graphframes.GraphFrame"></a>
+      <a id="gf:GraphFrame"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">gf</span><span class="result">: <span class="extype" name="org.graphframes.GraphFrame">GraphFrame</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@gf:org.graphframes.GraphFrame" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#graphName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="graphName:String"></a>
+      <a id="graphName:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">graphName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@graphName:String" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#graphName_=" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="graphName_=(name:String):Unit"></a>
+      <a id="graphName_=(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: graphName_$eq" class="name">graphName_=</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@graphName_=(name:String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">restore or change the name of the graph
+</p>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#graphSchema" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="graphSchema:&lt;error&gt;"></a>
+      <a id="graphSchema:&lt;error&gt;"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">graphSchema</span><span class="result">: &lt;error&gt;</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@graphSchema:&lt;error&gt;" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Return schema of this graph base on it name
+NoSuchElementException will be thrown if graph name is unknown and schema can not be retrieved
+</p><div class="fullcomment"><div class="comment cmt"><p>Return schema of this graph base on it name
+NoSuchElementException will be thrown if graph name is unknown and schema can not be retrieved
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Graph Schema</p></dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#idColumn" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="idColumn(labelColumn:org.apache.spark.sql.Column,idColumns:org.apache.spark.sql.Column*):org.apache.spark.sql.Column"></a>
+      <a id="idColumn(Column,Column*):Column"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">idColumn</span><span class="params">(<span name="labelColumn">labelColumn: <span class="extype" name="org.apache.spark.sql.Column">Column</span></span>, <span name="idColumns">idColumns: <span class="extype" name="org.apache.spark.sql.Column">Column</span>*</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.sql.Column">Column</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@idColumn(labelColumn:org.apache.spark.sql.Column,idColumns:org.apache.spark.sql.Column*):org.apache.spark.sql.Column" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Utility method to generate GraphFrame compatible ids.</p><div class="fullcomment"><div class="comment cmt"><p>Utility method to generate GraphFrame compatible ids.
+The id is added automatically when vertex is inserted, if inserted columns has the same names as in graph schema
+It is not possible for edges as you need to point both src and dst ids.
+Usage:
+val updateEdgeDF = sourceDF.select (gf.idColumn(col(&quot;srcLabel&quot;), col(&quot;srcId&quot;)) ad src, gf.idColumn(col(&quot;dstLabel&quot;), col(&quot;dstId&quot;)) ad dst, col(&quot;label&quot;) as &quot;~label&quot;, gf.randomEdgeIdColumn,  col(&quot;property&quot;))
+ gf.updateEdges(updateEdgeDF)
+If different labels have different id format use case statement to sort them:
+when(col(&quot;srcLabel&quot;) === &quot;1format&quot;, col(&quot;src1Id&quot;)).when(col(&quot;srcLabel&quot;) === &quot;2format&quot;, col(&quot;src2Id&quot;)).otherwise(col(&quot;src3Id&quot;)) as src
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@varargs</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#persist" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="persist(storageLevel:org.apache.spark.storage.StorageLevel):DseGraphFrame.this.type"></a>
+      <a id="persist(StorageLevel):DseGraphFrame.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">persist</span><span class="params">(<span name="storageLevel">storageLevel: <span class="extype" name="org.apache.spark.storage.StorageLevel">StorageLevel</span></span>)</span><span class="result">: <a href="" class="extype" name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame">DseGraphFrame</a>.this.type</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@persist(storageLevel:org.apache.spark.storage.StorageLevel):DseGraphFrame.this.type" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">proxy call to gf.persist()
+</p><div class="fullcomment"><div class="comment cmt"><p>proxy call to gf.persist()
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>this</p></dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#persist" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="persist():DseGraphFrame.this.type"></a>
+      <a id="persist():DseGraphFrame.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">persist</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame">DseGraphFrame</a>.this.type</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@persist():DseGraphFrame.this.type" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">proxy call to gf.persist()
+</p><div class="fullcomment"><div class="comment cmt"><p>proxy call to gf.persist()
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>this</p></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@toString():String" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#unpersist" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unpersist(blocking:Boolean):DseGraphFrame.this.type"></a>
+      <a id="unpersist(Boolean):DseGraphFrame.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unpersist</span><span class="params">(<span name="blocking">blocking: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame">DseGraphFrame</a>.this.type</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@unpersist(blocking:Boolean):DseGraphFrame.this.type" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">proxy call to gf.unpersist()
+</p><div class="fullcomment"><div class="comment cmt"><p>proxy call to gf.unpersist()
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>this</p></dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#unpersist" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unpersist():DseGraphFrame.this.type"></a>
+      <a id="unpersist():DseGraphFrame.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unpersist</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame">DseGraphFrame</a>.this.type</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@unpersist():DseGraphFrame.this.type" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">proxy call to gf.unpersist()
+</p><div class="fullcomment"><div class="comment cmt"><p>proxy call to gf.unpersist()
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>this</p></dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#updateEdges" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateEdges(df:org.apache.spark.sql.DataFrame,cache:Boolean):Unit"></a>
+      <a id="updateEdges(DataFrame,Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateEdges</span><span class="params">(<span name="df">df: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>, <span name="cache">cache: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@updateEdges(df:org.apache.spark.sql.DataFrame,cache:Boolean):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">update this graph edges.</p><div class="fullcomment"><div class="comment cmt"><p>update this graph edges.
+the minimal df schema is: 4 id columns and at least one property to update
++--------------------+--------------------+-------+--------------------+-------------------+
+|                 src|                 dst| ~label|                  id|               prop|
++--------------------+--------------------+-------+--------------------+-------------------+
+|god:THxdAAAAAAAAAAAA|titan:J474AAAAAAA...| father|da0a9900-8fe1-11e...|              value|
++--------------------+--------------------+-------+--------------------+-------------------+</p><p>if ID column is not present it will be generated and edges will be saved as new.
+</p></div><dl class="paramcmts block"><dt class="param">df</dt><dd class="cmt"><p>data frame with edge ids and update columns</p></dd><dt class="param">cache</dt><dd class="cmt"><p>cache df before processing, true by default for consistence updates.
+             two C* entries need to be updated for one edge, so no reloads expected between this two calls.</p></dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#updateEdges" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="updateEdges(df:org.apache.spark.sql.DataFrame):Unit"></a>
+      <a id="updateEdges(DataFrame):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateEdges</span><span class="params">(<span name="df">df: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@updateEdges(df:org.apache.spark.sql.DataFrame):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">shortcut for updateEdges(df: DataFrame, cache: Boolean = true) for Java
+</p>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#updateVertices" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateVertices(df:org.apache.spark.sql.DataFrame,labels:Seq[String],cache:Boolean):Unit"></a>
+      <a id="updateVertices(DataFrame,Seq[String],Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateVertices</span><span class="params">(<span name="df">df: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>, <span name="labels">labels: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="cache">cache: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@updateVertices(df:org.apache.spark.sql.DataFrame,labels:Seq[String],cache:Boolean):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">update this graph vertices with properties provided in the df.</p><div class="fullcomment"><div class="comment cmt"><p>update this graph vertices with properties provided in the df.
+the minimal df schema is just vertex &quot;id&quot; and one property to update:
++-----------------+---------+
+|               id|      age|
++-----------------+---------+
+|god:AAAAATMAAA...|        0|
++-----------------+---------+
+label and vertices id will be extracted from the graph frame id.
+for better performance it is recommended to add/leave &quot;~label&quot; column
++-----------------+---------+---------+
+|               id|   ~label|      age|
++-----------------+---------+---------+
+|god:AAAAATMAAA...|      god|        0|
++-----------------+---------+---------+
+you can also provide id in non encoded format
++-----------------+---------+---------+---------+
+|     community_id|member_id|   ~label|      age|
++-----------------+---------+---------+---------+
+|       1182054400|        0|      god|        0|
++-----------------+---------+---------+---------+
+Note: passing both synthetic &quot;id&quot; and vertex Id columns is an error.
+</p></div><dl class="paramcmts block"><dt class="param">df</dt><dd class="cmt"><p>dataframe with vertex id and update columns</p></dd><dt class="param">labels</dt><dd class="cmt"><p>empty (means all) by default, it is convenient to group vertexes with the same id format.
+              That group could be  passed here, to reduce number of verification steps</p></dd><dt class="param">cache</dt><dd class="cmt"><p>cache df before processing, true by default for consistence update and performance</p></dd></dl></div>
+    </li><li name="com.datastax.bdp.graph.spark.graphframe.DseGraphFrame#updateVertices" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateVertices(df:org.apache.spark.sql.DataFrame):Unit"></a>
+      <a id="updateVertices(DataFrame):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateVertices</span><span class="params">(<span name="df">df: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@updateVertices(df:org.apache.spark.sql.DataFrame):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">shortcut for updateVertices(df: DataFrame, labels: Seq[String] = Seq.empty, cache: Boolean = true) for Java API
+</p><div class="fullcomment"><div class="comment cmt"><p>shortcut for updateVertices(df: DataFrame, labels: Seq[String] = Seq.empty, cache: Boolean = true) for Java API
+</p></div><dl class="paramcmts block"><dt class="param">df</dt><dd class="cmt"><p>dataframe with vertex id and update columns</p></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.graphframe.DseGraphFrame@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

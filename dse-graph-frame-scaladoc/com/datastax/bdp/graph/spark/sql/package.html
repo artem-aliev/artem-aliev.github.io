@@ -1,0 +1,313 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>sql - DseGraphFrame Documnetation - com.datastax.bdp.graph.spark.sql</title>
+          <meta name="description" content="sql - DseGraphFrame Documnetation - com.datastax.bdp.graph.spark.sql" />
+          <meta name="keywords" content="sql DseGraphFrame Documnetation com.datastax.bdp.graph.spark.sql" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../../index.html';
+            var hash = 'com.datastax.bdp.graph.spark.sql.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../../package.html" class="extype" name="com">com</a>.<a href="../../../../package.html" class="extype" name="com.datastax">datastax</a>.<a href="../../../package.html" class="extype" name="com.datastax.bdp">bdp</a>.<a href="../../package.html" class="extype" name="com.datastax.bdp.graph">graph</a>.<a href="../package.html" class="extype" name="com.datastax.bdp.graph.spark">spark</a></p>
+        <h1>sql</h1><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.sql.package" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sql</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="com.datastax.bdp.graph.spark.sql.ArrayConverter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ArrayConverterextendsCassandraRowConverter"></a>
+      <a id="ArrayConverter:ArrayConverter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ArrayConverter.html"><span class="name">ArrayConverter</span></a><span class="result"> extends <a href="CassandraRowConverter.html" class="extype" name="com.datastax.bdp.graph.spark.sql.CassandraRowConverter">CassandraRowConverter</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.sql.package@ArrayConverterextendsCassandraRowConverter" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.sql.CassandraRowConverter" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="CassandraRowConverterextendsorg.apache.spark.sql.Row=&gt;AnywithSerializable"></a>
+      <a id="CassandraRowConverter:CassandraRowConverter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CassandraRowConverter.html"><span class="name">CassandraRowConverter</span></a><span class="result"> extends (<span class="extype" name="org.apache.spark.sql.Row">Row</span>) ⇒ <span class="extype" name="scala.Any">Any</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.sql.package@CassandraRowConverterextendsorg.apache.spark.sql.Row=&gt;AnywithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Converters is not thread safe! For performance.</p><div class="fullcomment"><div class="comment cmt"><p>Converters is not thread safe! For performance. clone converters for each partition
+params: sqlRow iterator, fieldIndex in the row, beginning of meta property index
+return catalist compatible value
+All struct should be UnsafeRow type.
+</p></div></div>
+    </li><li name="com.datastax.bdp.graph.spark.sql.DateFieldConverter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DateFieldConverterextendsCassandraRowConverter"></a>
+      <a id="DateFieldConverter:DateFieldConverter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DateFieldConverter.html"><span class="name">DateFieldConverter</span></a><span class="result"> extends <a href="CassandraRowConverter.html" class="extype" name="com.datastax.bdp.graph.spark.sql.CassandraRowConverter">CassandraRowConverter</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.sql.package@DateFieldConverterextendsCassandraRowConverter" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.sql.DecimalFieldConverter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DecimalFieldConverterextendsCassandraRowConverter"></a>
+      <a id="DecimalFieldConverter:DecimalFieldConverter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DecimalFieldConverter.html"><span class="name">DecimalFieldConverter</span></a><span class="result"> extends <a href="CassandraRowConverter.html" class="extype" name="com.datastax.bdp.graph.spark.sql.CassandraRowConverter">CassandraRowConverter</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.sql.package@DecimalFieldConverterextendsCassandraRowConverter" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.sql.FieldConverter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FieldConverterextendsCassandraRowConverter"></a>
+      <a id="FieldConverter:FieldConverter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FieldConverter.html"><span class="name">FieldConverter</span></a><span class="result"> extends <a href="CassandraRowConverter.html" class="extype" name="com.datastax.bdp.graph.spark.sql.CassandraRowConverter">CassandraRowConverter</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.sql.package@FieldConverterextendsCassandraRowConverter" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.sql.StructConverter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StructConverterextendsCassandraRowConverter"></a>
+      <a id="StructConverter:StructConverter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="StructConverter.html"><span class="name">StructConverter</span></a><span class="result"> extends <a href="CassandraRowConverter.html" class="extype" name="com.datastax.bdp.graph.spark.sql.CassandraRowConverter">CassandraRowConverter</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.sql.package@StructConverterextendsCassandraRowConverter" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.sql.TimestampFieldConverter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TimestampFieldConverterextendsCassandraRowConverter"></a>
+      <a id="TimestampFieldConverter:TimestampFieldConverter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TimestampFieldConverter.html"><span class="name">TimestampFieldConverter</span></a><span class="result"> extends <a href="CassandraRowConverter.html" class="extype" name="com.datastax.bdp.graph.spark.sql.CassandraRowConverter">CassandraRowConverter</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.sql.package@TimestampFieldConverterextendsCassandraRowConverter" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="com.datastax.bdp.graph.spark.sql.CassandraRowConverter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CassandraRowConverter"></a>
+      <a id="CassandraRowConverter:CassandraRowConverter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CassandraRowConverter$.html"><span class="name">CassandraRowConverter</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.sql.package@CassandraRowConverter" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.sql.DataTypeConverter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DataTypeConverter"></a>
+      <a id="DataTypeConverter:DataTypeConverter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DataTypeConverter$.html"><span class="name">DataTypeConverter</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.sql.package@DataTypeConverter" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.sql.Filter2DfExprConverter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Filter2DfExprConverter"></a>
+      <a id="Filter2DfExprConverter:Filter2DfExprConverter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Filter2DfExprConverter$.html"><span class="name">Filter2DfExprConverter</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.sql.package@Filter2DfExprConverter" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Utility class to convert rdd Filters to DataFrame column expressions
+</p>
+    </li><li name="com.datastax.bdp.graph.spark.sql.edge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="edge"></a>
+      <a id="edge:edge"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="edge/package.html"><span class="name">edge</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.sql.package@edge" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="com.datastax.bdp.graph.spark.sql.vertex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="vertex"></a>
+      <a id="vertex:vertex"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="vertex/package.html"><span class="name">vertex</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#com.datastax.bdp.graph.spark.sql.package@vertex" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
